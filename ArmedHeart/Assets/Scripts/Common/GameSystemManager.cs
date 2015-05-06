@@ -4,12 +4,21 @@ using System.Collections;
 public class GameSystemManager : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		CheckGyroEnable ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void CheckGyroEnable()
+	{
+		//Active Gyro.
+		bool tGyroEnable = SystemInfo.supportsGyroscope;
+		if( tGyroEnable )
+		{
+			Input.gyro.enabled = true;
+		}
+		else
+		{
+			Debug.Log("Gyro is not supported.");
+		}
 	}
 }
