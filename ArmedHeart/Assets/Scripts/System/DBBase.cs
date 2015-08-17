@@ -12,6 +12,14 @@ public class DBDataBase
 [System.Serializable]
 public class DBBase<T> where T : DBDataBase ,new()
 {
+	public T GetData( int tId )
+	{
+		if( !dic.ContainsKey(tId ) )
+		{
+			return null;
+		}
+		return dic [tId]; 
+	}
 
 	public List<T> list = new List<T>();
 	public Dictionary<int,T> dic = new Dictionary<int, T>();
@@ -44,6 +52,7 @@ public class DBBase<T> where T : DBDataBase ,new()
 					continue;
 				}
 				FieldInfo tInfo = tFieldInfoDic[tParser.columNames[j]];
+				Debug.Log ( tInfo.FieldType.Name );
 				switch( tInfo.FieldType.Name )
 				{
 				case "Int32":
@@ -58,7 +67,7 @@ public class DBBase<T> where T : DBDataBase ,new()
 					tInfo.SetValue( t, tDatas[j] );
 					break;
 
-				case "float":
+				case "Single":
 					float tFloatData;
 					if( float.TryParse( tDatas[j], out tFloatData ))
 					{
@@ -66,7 +75,7 @@ public class DBBase<T> where T : DBDataBase ,new()
 					}
 					break;
 
-				case "bool":
+				case "Bool"://使用経験無し
 					tInfo.SetValue( t, tDatas[j] == "true" );
 					break;
 				}

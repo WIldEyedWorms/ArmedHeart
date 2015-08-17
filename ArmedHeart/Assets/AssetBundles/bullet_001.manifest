@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 3967623670
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 424dbdb92b154faf1e3128e1a6ff26ad
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d6cdf28952a8395360195fad870efc7f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+Assets:
+- Assets/Ammo Collection/Prefabs/Large Caliber/12,7 x 54 mm/12,7 x 54 mm Round.prefab
+Dependencies: []

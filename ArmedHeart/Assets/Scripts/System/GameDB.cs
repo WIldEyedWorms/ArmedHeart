@@ -2,17 +2,16 @@
 using System.Collections;
 
 public class GameDB : MonoBehaviour {
-
-
-	public TestDB testDB;
-	// Use this for initialization
-	void Start () {
-		LoadDB ();
-	}
+	
+	public BulletDB bulletDB;
+	public AssetDB  assetDB;
 
 	public void LoadDB()
 	{
-		testDB = new TestDB ();
-		testDB.Load ("Test");
+		bulletDB = new BulletDB ();
+		bulletDB.Load ("Bullet");
+
+		assetDB = new AssetDB ();
+		assetDB.Load ("Asset");
 	}
 }

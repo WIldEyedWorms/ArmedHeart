@@ -1,0 +1,2 @@
+﻿id,name,explanation,capacity,power,reloadSpeed,assetKey
+1,ライフル弾Lv1,強力なライフル弾,10,10,0.1,BULLET_001
